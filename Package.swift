@@ -24,7 +24,6 @@ let package = Package(
             sources: [
                 "Animations",
                 "RTSpinKitAnimating.h",
-                "RTSpinKitAnimating.m",
                 "RTSpinKitUtils.h",
                 "RTSpinKitUtils.m",
                 "RTSpinKitView.h",
