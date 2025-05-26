@@ -4,33 +4,95 @@ import PackageDescription
 let package = Package(
     name: "SpinKit",
     platforms: [
-        .iOS(.v11), // Ubah versi iOS sesuai kebutuhan Anda
+        .iOS(.v12), // Atur versi minimum iOS yang didukung
     ],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
+        // Mendefinisikan produk utama dari package
         .library(
             name: "SpinKit",
             targets: ["SpinKit"]),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
+        // Menambahkan dependensi eksternal jika ada
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
+        // Mendefinisikan target yang terdiri dari modul Swift
         .target(
             name: "SpinKit",
-            path: "SpinKit",
-            sources: [
-                "Animations",
-                "RTSpinKitAnimating.h",
-                "RTSpinKitAnimating.m",
-                "RTSpinKitUtils.h",
-                "RTSpinKitUtils.m",
-                "RTSpinKitView.h",
-                "RTSpinKitView.m"
-            ],
-            publicHeadersPath: "SpinKit"
-        ),
+            dependencies: [],
+            path: "SpinKit"),
+        .testTarget(
+            name: "SpinKitTests",
+            dependencies: ["SpinKit"]),
+        // Menambahkan target untuk folder Animations
+        .target(
+            name: "Animations",
+            dependencies: ["SpinKit"],
+            path: "SpinKit/Animations"),
+        // Menambahkan target untuk setiap file animasi di dalam folder Animations
+        .target(
+            name: "RTSpinKit3CubeGridAnimation",
+            dependencies: ["Animations"],
+            path: "SpinKit/Animations"),
+        .target(
+            name: "RTSpinKit9CubeGridAnim",
+            dependencies: ["Animations"],
+            path: "SpinKit/Animations"),
+        .target(
+            name: "RTSpinKitArcAltAnimation",
+            dependencies: ["Animations"],
+            path: "SpinKit/Animations"),
+        .target(
+            name: "RTSpinKitArcAnimation",
+            dependencies: ["Animations"],
+            path: "SpinKit/Animations"),
+        .target(
+            name: "RTSpinKitBounceAnimation",
+            dependencies: ["Animations"],
+            path: "SpinKit/Animations"),
+        .target(
+            name: "RTSpinKitChasingDotsAnimation",
+            dependencies: ["Animations"],
+            path: "SpinKit/Animations"),
+        .target(
+            name: "RTSpinKitCircleAnimation",
+            dependencies: ["Animations"],
+            path: "SpinKit/Animations"),
+        .target(
+            name: "RTSpinKitCircleFlipAnimation",
+            dependencies: ["Animations"],
+            path: "SpinKit/Animations"),
+        .target(
+            name: "RTSpinKitFadingCircleAltAnimation",
+            dependencies: ["Animations"],
+            path: "SpinKit/Animations"),
+        .target(
+            name: "RTSpinKitFadingCircleAnimation",
+            dependencies: ["Animations"],
+            path: "SpinKit/Animations"),
+        .target(
+            name: "RTSpinKitPlaneAnimation",
+            dependencies: ["Animations"],
+            path: "SpinKit/Animations"),
+        .target(
+            name: "RTSpinKitPulseAnimation",
+            dependencies: ["Animations"],
+            path: "SpinKit/Animations"),
+        .target(
+            name: "RTSpinKitThreeBounceAnimation",
+            dependencies: ["Animations"],
+            path: "SpinKit/Animations"),
+        .target(
+            name: "RTSpinKitWanderingCubesAnimation",
+            dependencies: ["Animations"],
+            path: "SpinKit/Animations"),
+        .target(
+            name: "RTSpinKitWaveAnimation",
+            dependencies: ["Animations"],
+            path: "SpinKit/Animations"),
+        .target(
+            name: "RTSpinKitWordPressAnimation",
+            dependencies: ["Animations"],
+            path: "SpinKit/Animations"),
     ]
 )
