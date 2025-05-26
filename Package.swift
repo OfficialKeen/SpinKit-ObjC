@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "SpinKit",
     platforms: [
-        .iOS(.v9), // Ubah versi iOS sesuai kebutuhan Anda
+        .iOS(.v11), // Ubah versi iOS sesuai kebutuhan Anda
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
@@ -20,18 +20,17 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SpinKit",
-            dependencies: []),
-        .target(
-            name: "RTSpinKitAnimating",
-            dependencies: ["SpinKit"]),
-        .target(
-            name: "RTSpinKitUtils",
-            dependencies: ["SpinKit"]),
-        .target(
-            name: "RTSpinKitView",
-            dependencies: ["SpinKit"]),
-        .testTarget(
-            name: "SpinKitTests",
-            dependencies: ["SpinKit"]),
+            path: "SpinKit",
+            sources: [
+                "Animations",
+                "RTSpinKitAnimating.h",
+                "RTSpinKitAnimating.m",
+                "RTSpinKitUtils.h",
+                "RTSpinKitUtils.m",
+                "RTSpinKitView.h",
+                "RTSpinKitView.m"
+            ],
+            publicHeadersPath: "SpinKit"
+        ),
     ]
 )
