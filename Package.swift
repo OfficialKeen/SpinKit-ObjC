@@ -16,10 +16,13 @@ let package = Package(
         // Menambahkan dependensi eksternal jika ada
     ],
     targets: [
-        // Mendefinisikan target yang terdiri dari modul Swift
         .target(
             name: "SpinKit",
-            dependencies: [],
-            path: "SpinKit")
+            path: "SpinKit",
+            publicHeadersPath: ".",
+            cSettings: [
+                .headerSearchPath(".")
+            ]
+        )
     ]
 )
