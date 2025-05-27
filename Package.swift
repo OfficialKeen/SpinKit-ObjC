@@ -28,7 +28,7 @@ let package = Package(
                 "RTSpinKitView.h",
                 "RTSpinKitView.m"
             ],
-            publicHeadersPath: "."
+            publicHeadersPath: "SpinKit"
         ),
         .testTarget(
             name: "SpinKitTests",
