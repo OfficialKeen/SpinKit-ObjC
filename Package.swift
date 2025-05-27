@@ -23,10 +23,20 @@ let package = Package(
             path: "SpinKit",
             sources: [
                 "Animations",
+                "RTSpinKitUtils.h",
                 "RTSpinKitUtils.m",
+                "RTSpinKitView.h",
                 "RTSpinKitView.m"
             ],
             publicHeadersPath: "."
-        )
+        ),
+        .testTarget(
+            name: "SpinKitTests",
+            dependencies: ["SpinKit"],
+            path: "Tests",
+            sources: [
+                "SpinKitTests"
+            ]
+        ),
     ]
 )
