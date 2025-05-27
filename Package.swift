@@ -12,14 +12,31 @@ let package = Package(
             name: "SpinKit",
             targets: ["SpinKit"]),
     ],
+    dependencies: [
+        // Dependencies declare other packages that this package depends on.
+    ],
     targets: [
+        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
+        // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SpinKit",
             path: "SpinKit",
-            publicHeadersPath: ".",
-            cSettings: [
-                .headerSearchPath(".")
+            sources: [
+                "Animations",
+                "RTSpinKitUtils.h",
+                "RTSpinKitUtils.m",
+                "RTSpinKitView.h",
+                "RTSpinKitView.m"
+            ],
+            publicHeadersPath: "SpinKit"
+        ),
+        .testTarget(
+            name: "SpinKitTests",
+            dependencies: ["SpinKit"],
+            path: "Tests",
+            sources: [
+                "SpinKitTests"
             ]
-        )
-    ]    
+        ),
+    ]
 )
