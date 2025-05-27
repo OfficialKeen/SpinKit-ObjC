@@ -21,9 +21,6 @@ let package = Package(
         .target(
             name: "SpinKit",
             path: "SpinKit",
-            sources: [
-                "Animations"
-            ],
             publicHeadersPath: "SpinKit"
         ),
         .testTarget(
