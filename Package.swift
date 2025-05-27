@@ -22,11 +22,7 @@ let package = Package(
             name: "SpinKit",
             path: "SpinKit",
             sources: [
-                "Animations",
-                "RTSpinKitUtils.h",
-                "RTSpinKitUtils.m",
-                "RTSpinKitView.h",
-                "RTSpinKitView.m"
+                "Animations"
             ],
             publicHeadersPath: "SpinKit"
         ),
