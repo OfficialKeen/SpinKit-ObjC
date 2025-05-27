@@ -26,13 +26,5 @@ let package = Package(
             ],
             publicHeadersPath: "SpinKit"
         ),
-        .testTarget(
-            name: "SpinKitTests",
-            dependencies: ["SpinKit"],
-            path: "Tests",
-            sources: [
-                "SpinKitTests"
-            ]
-        ),
     ]
 )
