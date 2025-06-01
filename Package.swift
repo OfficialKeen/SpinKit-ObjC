@@ -1,10 +1,10 @@
-// swift-tools-version:5.3
+// swift-tools-version:6.1
 import PackageDescription
 
 let package = Package(
     name: "SpinKit",
     platforms: [
-        .iOS(.v9), // Ubah versi iOS sesuai kebutuhan Anda
+        .iOS(.v12), // Ubah versi iOS sesuai kebutuhan Anda
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
@@ -24,7 +24,7 @@ let package = Package(
             sources: [
                 "RTSpinKitAnimating.h", "RTSpinKitView.h", "RTSpinKitUtils.h",
             ],
-            publicHeadersPath: "SpinKit/RTSpinKitView.h",
+            publicHeadersPath: "."
         ),
     ]
 )
