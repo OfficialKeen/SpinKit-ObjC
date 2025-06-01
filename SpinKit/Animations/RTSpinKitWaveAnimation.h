@@ -23,7 +23,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "./RTSpinKitAnimating.h"
+#import "RTSpinKitAnimating.h"
 
 @interface RTSpinKitWaveAnimation : NSObject<RTSpinKitAnimating>
 
