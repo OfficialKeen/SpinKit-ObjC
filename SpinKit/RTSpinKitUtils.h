@@ -23,8 +23,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SpinKit/RTSpinKitView.h"
-#import "SpinKit/RTSpinKitAnimating.h"
+#import "RTSpinKitView.h"
+#import "RTSpinKitAnimating.h"
 
 CATransform3D RTSpinKit3DRotationWithPerspective(CGFloat perspective, CGFloat angle, CGFloat x, CGFloat y, CGFloat z);
 NSObject<RTSpinKitAnimating>* RTSpinKitAnimationFromStyle(RTSpinKitViewStyle style);

@@ -24,7 +24,7 @@ let package = Package(
             sources: [
                 "RTSpinKitAnimating.h", "RTSpinKitView.h", "RTSpinKitUtils.h",
             ],
-            publicHeadersPath: "."
+            publicHeadersPath: "SpinKit/RTSpinKitView.h",
         ),
     ]
 )
