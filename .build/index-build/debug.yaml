@@ -1,0 +1,22 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "SpinKit-arm64-apple-macosx15.0-debug.module": ["<SpinKit-arm64-apple-macosx15.0-debug.module>"]
+  "main": []
+  "test": []
+default: "main"
+nodes:
+  "/Users/keenoi/iOS/Olsera/Fork/SpinKit-ObjC/SpinKit/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/keenoi/iOS/Olsera/Fork/SpinKit-ObjC/SpinKit/","/Users/keenoi/iOS/Olsera/Fork/SpinKit-ObjC/Package.swift","/Users/keenoi/iOS/Olsera/Fork/SpinKit-ObjC/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

@@ -1,4 +1,4 @@
-// swift-tools-version:6.1
+/*// swift-tools-version:6.1
 import PackageDescription
 
 let package = Package(
@@ -18,21 +18,42 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        /*.target(
+        .target(
             name: "SpinKit",
             path: "SpinKit",
             sources: [
                 "RTSpinKitAnimating.h"
             ],
             publicHeadersPath: ".",
-        ),*/
+        ),
+    ]
+)*/
+
+// swift-tools-version:6.1
+import PackageDescription
+
+let package = Package(
+    name: "SpinKit",
+    products: [
+        .library(
+            name: "SpinKit",
+            targets: ["SpinKit"]
+        ),
+    ],
+    dependencies: [],
+    targets: [
         .target(
             name: "SpinKit",
+            dependencies: [],
             path: "SpinKit",
             sources: [
-                "RTSpinKitView.h", "RTSpinKitAnimating.h"
+                "RTSpinKitAnimating.h",
             ],
-            publicHeadersPath: ".",
+            publicHeadersPath: "Animations",
+            cSettings: [
+                .headerSearchPath("SpinKit/Animations"),
+                .headerSearchPath("SpinKit")
+            ]
         ),
     ]
 )
