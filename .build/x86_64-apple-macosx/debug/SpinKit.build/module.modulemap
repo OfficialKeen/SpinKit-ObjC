@@ -1,4 +1,0 @@
-module SpinKit {
-    umbrella "/Users/keenoi/iOS/Olsera/Fork/SpinKit-ObjC/SpinKit"
-    export *
-}
