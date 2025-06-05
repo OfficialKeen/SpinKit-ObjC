@@ -47,7 +47,7 @@ let package = Package(
             dependencies: [],
             path: "SpinKit",
             sources: [
-                "RTSpinKitAnimating.h",
+                ".",
             ],
             publicHeadersPath: "Animations",
             cSettings: [
