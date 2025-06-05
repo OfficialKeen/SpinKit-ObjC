@@ -30,7 +30,7 @@ let package = Package(
             name: "SpinKit",
             path: "SpinKit",
             sources: [
-                "SpinKit/RTSpinKitView.h", "SpinKit/RTSpinKitAnimating.h"
+                "RTSpinKitView.h", "RTSpinKitAnimating.h"
             ],
             publicHeadersPath: ".",
         ),
