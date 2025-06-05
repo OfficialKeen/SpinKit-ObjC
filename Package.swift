@@ -28,7 +28,7 @@ let package = Package(
         ),*/
         .target(
             name: "SpinKit",
-            path: "SpinKit/Animations",
+            path: "SpinKit",
             sources: [
                 "."
             ],
