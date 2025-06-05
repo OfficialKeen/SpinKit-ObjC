@@ -9,13 +9,13 @@ targets:
   "test": []
 default: "main"
 nodes:
-  "/Users/keenoi/iOS/Olsera/Fork/SpinKit-ObjC/SpinKit/":
+  "/Users/keenoi/iOS/Olsera/Fork/SpinKit-ObjC/SpinKit/Animations/":
     is-directory-structure: true
     content-exclusion-patterns: [".git",".build"]
 commands:
   "PackageStructure":
     tool: package-structure-tool
-    inputs: ["/Users/keenoi/iOS/Olsera/Fork/SpinKit-ObjC/SpinKit/","/Users/keenoi/iOS/Olsera/Fork/SpinKit-ObjC/Package.swift","/Users/keenoi/iOS/Olsera/Fork/SpinKit-ObjC/Package.resolved"]
+    inputs: ["/Users/keenoi/iOS/Olsera/Fork/SpinKit-ObjC/SpinKit/Animations/","/Users/keenoi/iOS/Olsera/Fork/SpinKit-ObjC/Package.swift","/Users/keenoi/iOS/Olsera/Fork/SpinKit-ObjC/Package.resolved"]
     outputs: ["<PackageStructure>"]
     description: "Planning build"
     allow-missing-inputs: true
